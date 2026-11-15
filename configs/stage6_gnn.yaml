@@ -1,0 +1,65 @@
+contract_version: stage6-gnn-fast-track-v1
+dataset_version: medajob-temporal-v0.3
+primary_delta_days: 14
+ranking_scope: exposed_set
+model_seed: 42
+
+shared_model:
+  layers: 2
+  hidden_dim: 64
+  dropout: 0.2
+  scorer: concat_product_absolute_difference_mlp
+  loss: weighted_bce_with_logits
+  optimizer: AdamW
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  max_epochs: 50
+  early_stopping_patience: 7
+
+relations:
+  - candidate_to_skill
+  - skill_to_candidate
+  - job_to_skill
+  - skill_to_job
+  - impression_candidate_to_job
+  - impression_job_to_candidate
+  - view_candidate_to_job
+  - view_job_to_candidate
+  - save_candidate_to_job
+  - save_job_to_candidate
+  - apply_candidate_to_job
+  - apply_job_to_candidate
+
+static_graphsage:
+  model_id: M0_static_graphsage
+  event_edge_weight: 1.0
+  content_membership_weight: 1.0
+
+temporal_graphsage:
+  model_id: M1_temporal_graphsage_decay
+  smoke_half_life_days: 14
+  validation_half_life_days: [7, 14, 30]
+  content_membership_weight: 1.0
+  decay_event_interactions_only: true
+
+smoke:
+  data_seed: 53021
+  scenario: S1
+  split: validation
+  max_train_sessions: 8
+  max_validation_sessions: 4
+  epochs: 3
+  half_life_days: 14
+
+validation:
+  data_seeds: [53021, 53022]
+  scenarios: [S0, S1, S2]
+  split: validation
+  model_seed: 42
+  common_config_across_cells: true
+
+final:
+  require_config_lock: true
+  split: test
+  model_seeds: [42, 43, 44]
+  retune_after_test: false

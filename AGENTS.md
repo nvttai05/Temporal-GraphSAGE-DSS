@@ -20,8 +20,9 @@ This repository implements Stage 6 of the DSS temporal job-recommendation projec
 - Store every run's config, code commit, seeds, environment and output hashes.
 - Keep laptop work to development, preflight and smoke tests. Official results are produced on Colab.
 - Ask before changing any locked item in `configs/stage6_protocol.yaml` or `configs/experiments.yaml`.
-- GĐ6 contains Random, Popularity, CBF, XGBoost-static, XGBoost-time and Static GraphSAGE only.
-- Temporal GraphSAGE, TGAT and TGN belong to GĐ7.
+- GĐ6 contains Random, Popularity, CBF, XGBoost-static, XGBoost-time, Static GraphSAGE and the explicitly scoped Temporal GraphSAGE + exponential time-decay fast-track variant.
+- Static GraphSAGE and Temporal GraphSAGE must share encoder, scorer, loss, train budget and evaluator; only event-interaction aggregation weights may differ. Content-membership edges never decay.
+- TGAT and TGN remain GĐ7 work and are out of scope for GĐ6.
 
 ## Required GĐ6.0 outputs
 

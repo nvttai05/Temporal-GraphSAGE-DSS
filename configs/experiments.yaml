@@ -1,4 +1,9 @@
-experiment_contract_version: stage6-v1
+experiment_contract_version: stage6-v2
+
+changelog:
+  - version: stage6-v2
+    date: '2026-11-15'
+    change: Add the traceable Temporal GraphSAGE exponential time-decay fast-track comparison; keep TGAT/TGN in GĐ7 and preserve the stage6-v1 data/ranking protocol.
 
 environments:
   development: windows_laptop_python_3_11
@@ -42,6 +47,20 @@ models:
     features: [F0_content, F1_static_history]
     use_time_encoding: false
     use_time_decay: false
+    official_environment: google_colab_gpu
+  temporal_graphsage_time_decay:
+    tuning_budget: 3
+    max_epochs: 50
+    early_stopping_patience: 7
+    loss: weighted_bce_with_logits
+    features: [F0_content, F1_static_history, event_age_time_decay]
+    layers: 2
+    hidden_dim: 64
+    dropout: 0.2
+    half_life_days: [7, 14, 30]
+    smoke_half_life_days: 14
+    decay_event_interactions_only: true
+    content_membership_decay: false
     official_environment: google_colab_gpu
 
 selection:
