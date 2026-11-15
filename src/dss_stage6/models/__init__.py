@@ -6,6 +6,7 @@ from .baselines import (
     RandomBaseline,
     default_cbf_configs,
 )
+from .xgboost_models import Stage6XGBoost, scale_pos_weight
 
 __all__ = [
     "CBFConfig",
@@ -13,5 +14,7 @@ __all__ = [
     "ContentRepository",
     "PopularityAsOfT",
     "RandomBaseline",
+    "Stage6XGBoost",
     "default_cbf_configs",
+    "scale_pos_weight",
 ]

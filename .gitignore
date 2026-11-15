@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+configs/paths.local.yaml
+artifacts/checkpoints/
+artifacts/runs/
+artifacts/environment/*.json
+data/medajob-temporal-v0.3/
+

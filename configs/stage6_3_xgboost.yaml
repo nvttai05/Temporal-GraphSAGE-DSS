@@ -1,0 +1,91 @@
+contract_version: stage6.3a-v1
+status: locked_before_local_smoke
+created_with_seed: 42
+
+scope:
+  models: [xgboost_static, xgboost_time]
+  objective: binary:logistic
+  tree_method: hist
+  eval_metric: logloss
+  tuning_model_seed: 42
+  validation_split: validation
+  primary_delta_days: 14
+  local_smoke_cell: {seed: 53021, scenario: S0}
+  local_smoke_max_trials_per_model: 2
+  full_trials_per_model: 20
+  common_config_across_data_cells: true
+  train_each_data_cell_separately: true
+
+search_space:
+  n_estimators: {min: 200, max: 800, type: integer}
+  learning_rate: [0.03, 0.05, 0.10]
+  max_depth: [3, 5, 7]
+  min_child_weight: [1, 5, 10]
+  subsample: [0.8, 1.0]
+  colsample_bytree: [0.8, 1.0]
+  reg_alpha: [0, 0.1, 1.0]
+  reg_lambda: [1, 5, 10]
+  gamma: [0, 0.1]
+
+trials:
+  - {trial_id: trial_01, n_estimators: 314, learning_rate: 0.03, max_depth: 7, min_child_weight: 5, subsample: 0.8, colsample_bytree: 0.8, reg_alpha: 0, reg_lambda: 10, gamma: 0}
+  - {trial_id: trial_02, n_estimators: 758, learning_rate: 0.03, max_depth: 7, min_child_weight: 5, subsample: 0.8, colsample_bytree: 0.8, reg_alpha: 0, reg_lambda: 1, gamma: 0}
+  - {trial_id: trial_03, n_estimators: 717, learning_rate: 0.10, max_depth: 3, min_child_weight: 10, subsample: 0.8, colsample_bytree: 1.0, reg_alpha: 0, reg_lambda: 5, gamma: 0.1}
+  - {trial_id: trial_04, n_estimators: 206, learning_rate: 0.03, max_depth: 7, min_child_weight: 5, subsample: 1.0, colsample_bytree: 1.0, reg_alpha: 0, reg_lambda: 1, gamma: 0.1}
+  - {trial_id: trial_05, n_estimators: 304, learning_rate: 0.03, max_depth: 5, min_child_weight: 1, subsample: 1.0, colsample_bytree: 1.0, reg_alpha: 1.0, reg_lambda: 5, gamma: 0}
+  - {trial_id: trial_06, n_estimators: 670, learning_rate: 0.10, max_depth: 3, min_child_weight: 5, subsample: 0.8, colsample_bytree: 1.0, reg_alpha: 1.0, reg_lambda: 10, gamma: 0.1}
+  - {trial_id: trial_07, n_estimators: 791, learning_rate: 0.03, max_depth: 7, min_child_weight: 1, subsample: 0.8, colsample_bytree: 0.8, reg_alpha: 0.1, reg_lambda: 1, gamma: 0}
+  - {trial_id: trial_08, n_estimators: 303, learning_rate: 0.05, max_depth: 5, min_child_weight: 5, subsample: 1.0, colsample_bytree: 0.8, reg_alpha: 0.1, reg_lambda: 5, gamma: 0}
+  - {trial_id: trial_09, n_estimators: 473, learning_rate: 0.10, max_depth: 7, min_child_weight: 10, subsample: 0.8, colsample_bytree: 0.8, reg_alpha: 1.0, reg_lambda: 10, gamma: 0}
+  - {trial_id: trial_10, n_estimators: 367, learning_rate: 0.05, max_depth: 5, min_child_weight: 5, subsample: 0.8, colsample_bytree: 1.0, reg_alpha: 0, reg_lambda: 1, gamma: 0}
+  - {trial_id: trial_11, n_estimators: 523, learning_rate: 0.05, max_depth: 5, min_child_weight: 1, subsample: 0.8, colsample_bytree: 1.0, reg_alpha: 0, reg_lambda: 10, gamma: 0.1}
+  - {trial_id: trial_12, n_estimators: 605, learning_rate: 0.10, max_depth: 5, min_child_weight: 1, subsample: 1.0, colsample_bytree: 0.8, reg_alpha: 0, reg_lambda: 10, gamma: 0.1}
+  - {trial_id: trial_13, n_estimators: 798, learning_rate: 0.05, max_depth: 7, min_child_weight: 5, subsample: 1.0, colsample_bytree: 0.8, reg_alpha: 0, reg_lambda: 10, gamma: 0.1}
+  - {trial_id: trial_14, n_estimators: 293, learning_rate: 0.03, max_depth: 3, min_child_weight: 1, subsample: 0.8, colsample_bytree: 1.0, reg_alpha: 1.0, reg_lambda: 1, gamma: 0.1}
+  - {trial_id: trial_15, n_estimators: 590, learning_rate: 0.10, max_depth: 5, min_child_weight: 10, subsample: 1.0, colsample_bytree: 0.8, reg_alpha: 1.0, reg_lambda: 10, gamma: 0}
+  - {trial_id: trial_16, n_estimators: 749, learning_rate: 0.05, max_depth: 7, min_child_weight: 5, subsample: 0.8, colsample_bytree: 1.0, reg_alpha: 0.1, reg_lambda: 1, gamma: 0.1}
+  - {trial_id: trial_17, n_estimators: 203, learning_rate: 0.10, max_depth: 7, min_child_weight: 5, subsample: 0.8, colsample_bytree: 0.8, reg_alpha: 1.0, reg_lambda: 5, gamma: 0}
+  - {trial_id: trial_18, n_estimators: 356, learning_rate: 0.05, max_depth: 3, min_child_weight: 10, subsample: 0.8, colsample_bytree: 1.0, reg_alpha: 0.1, reg_lambda: 1, gamma: 0}
+  - {trial_id: trial_19, n_estimators: 571, learning_rate: 0.05, max_depth: 3, min_child_weight: 1, subsample: 0.8, colsample_bytree: 0.8, reg_alpha: 0, reg_lambda: 10, gamma: 0.1}
+  - {trial_id: trial_20, n_estimators: 270, learning_rate: 0.10, max_depth: 3, min_child_weight: 1, subsample: 1.0, colsample_bytree: 0.8, reg_alpha: 0.1, reg_lambda: 10, gamma: 0.1}
+
+feature_contract:
+  f0:
+    - cbf_score_locked_cbf_05_skills3_occupation2
+    - skill_overlap_count
+    - skill_jaccard
+    - skill_binary_cosine
+    - occupation_match
+    - location_match
+    - experience_match
+    - experience_distance
+  f1:
+    - candidate_cumulative_impression_count
+    - candidate_cumulative_view_count
+    - candidate_cumulative_save_count
+    - candidate_cumulative_apply_count
+    - job_cumulative_impression_count
+    - job_cumulative_view_count
+    - job_cumulative_save_count
+    - job_cumulative_apply_count
+    - candidate_job_prior_interaction_count
+    - candidate_job_prior_view_count
+    - candidate_job_prior_save_count
+    - candidate_job_prior_apply_count
+    - candidate_job_prior_interaction_flag
+    - candidate_degree
+    - job_degree
+  f2:
+    recency_missing_sentinel_days: 100000.0
+    exponential_decay_half_life_days: 14.0
+    windows_days: [7, 14, 30]
+
+local_smoke:
+  max_train_sessions: 160
+  max_validation_sessions: 40
+  trials_to_run: [trial_01, trial_02]
+
+colab:
+  resume: true
+  checkpoint_every_trial: true
+  output_subdir: stage6_3_colab
