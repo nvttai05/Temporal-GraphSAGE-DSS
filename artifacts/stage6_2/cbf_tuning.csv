@@ -1,0 +1,7 @@
+level,model,config_id,seed,scenario,cohort,session_count,ndcg_at_10,recall_at_10,complexity
+macro_over_data_cells,cbf,cbf_05_skills3_occupation2,ALL,ALL,all,1537,0.23741988537525005,0.44724922870875305,7
+macro_over_data_cells,cbf,cbf_02_skills2,ALL,ALL,all,1537,0.23639296024797332,0.4437330177381007,5
+macro_over_data_cells,cbf,cbf_06_compact,ALL,ALL,all,1537,0.2360775594929897,0.4457544493531456,2
+macro_over_data_cells,cbf,cbf_04_geo_experience2,ALL,ALL,all,1537,0.23538519589121407,0.4458146056481053,6
+macro_over_data_cells,cbf,cbf_03_occupation2,ALL,ALL,all,1537,0.23392497208401244,0.44362201818709585,5
+macro_over_data_cells,cbf,cbf_01_balanced,ALL,ALL,all,1537,0.2335890847427199,0.4406018073773508,4

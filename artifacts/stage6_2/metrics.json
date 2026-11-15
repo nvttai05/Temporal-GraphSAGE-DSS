@@ -1,0 +1,23 @@
+[
+  {
+    "model": "cbf",
+    "config_id": "cbf_05_skills3_occupation2",
+    "ndcg_at_10": 0.23741988537525005,
+    "recall_at_10": 0.44724922870875305,
+    "session_count": 1537
+  },
+  {
+    "model": "popularity_asof_t",
+    "config_id": "no_tuning",
+    "ndcg_at_10": 0.21831494442201207,
+    "recall_at_10": 0.423033275156298,
+    "session_count": 1537
+  },
+  {
+    "model": "random",
+    "config_id": "seed_42",
+    "ndcg_at_10": 0.2263392784416424,
+    "recall_at_10": 0.43395268216618016,
+    "session_count": 1537
+  }
+]

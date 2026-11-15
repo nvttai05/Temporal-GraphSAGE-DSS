@@ -1,0 +1,82 @@
+{
+  "schema_version": "stage6.2-acceptance-v1",
+  "run": {
+    "run_id": "stage6_2_20261115T133624442554Z",
+    "started_at_utc": "2026-11-15T13:32:19.644593+00:00",
+    "finished_at_utc": "2026-11-15T13:36:24.834304+00:00",
+    "runtime_seconds": 245.18799999996554,
+    "split": "validation",
+    "delta_days": 14,
+    "data_cells": 6,
+    "test_predictions_opened": false,
+    "registry_receipt": "artifacts/stage6_2/run_registry/stage6_2_20261115T133624442554Z.json"
+  },
+  "checks": {
+    "prerequisites": {
+      "status": "PASS",
+      "summary": "GĐ6.0 and GĐ6.1 acceptance are PASS"
+    },
+    "random": {
+      "status": "PASS",
+      "summary": "Seed 42 sanity scorer is deterministic and scores exposed jobs only"
+    },
+    "popularity_asof_t": {
+      "status": "PASS",
+      "summary": "Scores count apply events from shared strict as-of-t HistoryStore with no tuning; violations=0"
+    },
+    "cbf_train_only": {
+      "status": "PASS",
+      "summary": "Six F0 configurations share train-fitted vocabularies that remain unchanged on validation"
+    },
+    "six_cell_validation": {
+      "status": "PASS",
+      "summary": "Random, Popularity and selected CBF evaluated on validation Δ14 in all six cells"
+    },
+    "prediction_coverage": {
+      "status": "PASS",
+      "summary": "Every prediction file exactly equals its evaluated exposed candidate pairs"
+    },
+    "shared_evaluator": {
+      "status": "PASS",
+      "summary": "All metrics were produced through the shared RankingEvaluator"
+    },
+    "determinism": {
+      "status": "PASS",
+      "summary": "Repeated scores match for every model and data cell"
+    },
+    "tests": {
+      "status": "PASS",
+      "summary": "Full pytest exit=0"
+    },
+    "locked_inputs": {
+      "status": "PASS",
+      "summary": "Dataset was read-only and locked protocol/experiment hashes are unchanged"
+    }
+  },
+  "passed_checks": 10,
+  "total_checks": 10,
+  "overall_status": "PASS",
+  "selection": {
+    "selected_config_id": "cbf_05_skills3_occupation2",
+    "macro_ndcg_at_10": 0.23741988537525005,
+    "macro_recall_at_10": 0.44724922870875305,
+    "complexity": 7
+  },
+  "content_contract": {
+    "used": [
+      "skills",
+      "occupation",
+      "location",
+      "experience"
+    ],
+    "title_description": "UNAVAILABLE_BY_FROZEN_STAGE5_CONTRACT",
+    "salary_used": false
+  },
+  "decision": "GĐ6.2 PASS. Random, Popularity as-of-t and one common selected CBF configuration are deterministic, leakage-safe and evaluated through the shared engine.",
+  "constraints_observed": {
+    "test_predictions_opened": false,
+    "dataset_modified": false,
+    "protocol_modified": false,
+    "trained_disallowed_model": false
+  }
+}

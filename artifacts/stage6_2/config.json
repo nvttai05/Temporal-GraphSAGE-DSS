@@ -1,0 +1,104 @@
+{
+  "config": {
+    "stage": "6.2",
+    "validation_split": "validation",
+    "delta_days": 14,
+    "ranking_scope": "exposed_set",
+    "k": 10,
+    "random_seed": 42,
+    "popularity": {
+      "event": "apply",
+      "tuning": false,
+      "strict_as_of_t": true
+    },
+    "cbf": {
+      "features": [
+        "skills",
+        "occupation",
+        "location",
+        "experience"
+      ],
+      "unavailable_by_frozen_contract": [
+        "title",
+        "description"
+      ],
+      "salary_used": false,
+      "representation": "binary",
+      "configs": [
+        {
+          "config_id": "cbf_01_balanced",
+          "field_weights": {
+            "skills": 1,
+            "occupation": 1,
+            "location": 1,
+            "experience": 1
+          },
+          "representation": "binary",
+          "complexity": 4
+        },
+        {
+          "config_id": "cbf_02_skills2",
+          "field_weights": {
+            "skills": 2,
+            "occupation": 1,
+            "location": 1,
+            "experience": 1
+          },
+          "representation": "binary",
+          "complexity": 5
+        },
+        {
+          "config_id": "cbf_03_occupation2",
+          "field_weights": {
+            "skills": 1,
+            "occupation": 2,
+            "location": 1,
+            "experience": 1
+          },
+          "representation": "binary",
+          "complexity": 5
+        },
+        {
+          "config_id": "cbf_04_geo_experience2",
+          "field_weights": {
+            "skills": 1,
+            "occupation": 1,
+            "location": 2,
+            "experience": 2
+          },
+          "representation": "binary",
+          "complexity": 6
+        },
+        {
+          "config_id": "cbf_05_skills3_occupation2",
+          "field_weights": {
+            "skills": 3,
+            "occupation": 2,
+            "location": 1,
+            "experience": 1
+          },
+          "representation": "binary",
+          "complexity": 7
+        },
+        {
+          "config_id": "cbf_06_compact",
+          "field_weights": {
+            "skills": 1,
+            "occupation": 1,
+            "location": 0,
+            "experience": 0
+          },
+          "representation": "binary",
+          "complexity": 2
+        }
+      ],
+      "selected_config_id": "cbf_05_skills3_occupation2",
+      "selection": [
+        "macro_ndcg_at_10",
+        "recall_at_10",
+        "lower_complexity"
+      ]
+    }
+  },
+  "config_sha256": "ea829c0f3aa5f5295f4c36a05fe2b2139de411a27e5daaa8e1380505f47fc7d7"
+}

@@ -1,0 +1,159 @@
+{
+  "run_id": "stage6_2_20261115T133624442554Z",
+  "status": "PASS",
+  "config": {
+    "stage": "6.2",
+    "validation_split": "validation",
+    "delta_days": 14,
+    "ranking_scope": "exposed_set",
+    "k": 10,
+    "random_seed": 42,
+    "popularity": {
+      "event": "apply",
+      "tuning": false,
+      "strict_as_of_t": true
+    },
+    "cbf": {
+      "features": [
+        "skills",
+        "occupation",
+        "location",
+        "experience"
+      ],
+      "unavailable_by_frozen_contract": [
+        "title",
+        "description"
+      ],
+      "salary_used": false,
+      "representation": "binary",
+      "configs": [
+        {
+          "config_id": "cbf_01_balanced",
+          "field_weights": {
+            "skills": 1,
+            "occupation": 1,
+            "location": 1,
+            "experience": 1
+          },
+          "representation": "binary",
+          "complexity": 4
+        },
+        {
+          "config_id": "cbf_02_skills2",
+          "field_weights": {
+            "skills": 2,
+            "occupation": 1,
+            "location": 1,
+            "experience": 1
+          },
+          "representation": "binary",
+          "complexity": 5
+        },
+        {
+          "config_id": "cbf_03_occupation2",
+          "field_weights": {
+            "skills": 1,
+            "occupation": 2,
+            "location": 1,
+            "experience": 1
+          },
+          "representation": "binary",
+          "complexity": 5
+        },
+        {
+          "config_id": "cbf_04_geo_experience2",
+          "field_weights": {
+            "skills": 1,
+            "occupation": 1,
+            "location": 2,
+            "experience": 2
+          },
+          "representation": "binary",
+          "complexity": 6
+        },
+        {
+          "config_id": "cbf_05_skills3_occupation2",
+          "field_weights": {
+            "skills": 3,
+            "occupation": 2,
+            "location": 1,
+            "experience": 1
+          },
+          "representation": "binary",
+          "complexity": 7
+        },
+        {
+          "config_id": "cbf_06_compact",
+          "field_weights": {
+            "skills": 1,
+            "occupation": 1,
+            "location": 0,
+            "experience": 0
+          },
+          "representation": "binary",
+          "complexity": 2
+        }
+      ],
+      "selected_config_id": "cbf_05_skills3_occupation2",
+      "selection": [
+        "macro_ndcg_at_10",
+        "recall_at_10",
+        "lower_complexity"
+      ]
+    }
+  },
+  "config_sha256": "ea829c0f3aa5f5295f4c36a05fe2b2139de411a27e5daaa8e1380505f47fc7d7",
+  "code_version": {
+    "git_commit": "1a11f1cf35d7f74cfe2c318e65f1f250cc8f185c",
+    "source_tree_sha256": "b7555a434e27cb1855ffb5a36b3413497e1c9172e51fdd9da131e0fafdd0698a"
+  },
+  "seeds": {
+    "data": [
+      53021,
+      53022
+    ],
+    "tuning_model_seed": 42,
+    "final_model_seeds": [
+      42,
+      43,
+      44
+    ]
+  },
+  "environment": {
+    "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+    "executable": "D:\\HocTap\\DSS\\CK_v2.0\\Stage6\\.venv\\Scripts\\python.exe",
+    "platform": "Windows-10-10.0.26200-SP0"
+  },
+  "runtime_seconds": 245.18799999996554,
+  "artifact_sha256": {
+    "artifacts\\stage6_2\\predictions\\random_seed_53021_S0.csv": "bd93f485d0d9a3e91ca6fec6d5dc6519764dab0cb126e0a6b302857063ed0b0e",
+    "artifacts\\stage6_2\\predictions\\random_seed_53021_S1.csv": "572c0ac6e6113f20de882d667acdb0273d06efa6cecd15c36b5fa1993ed20acd",
+    "artifacts\\stage6_2\\predictions\\random_seed_53021_S2.csv": "6e4af320c777e75e58473dd98ccccc46fae3d224ae040d14da1efdc833767e68",
+    "artifacts\\stage6_2\\predictions\\random_seed_53022_S0.csv": "f4b0dfa4662c907119f5b25069b7124c958249e5e6b681bb3ace0d728c89e1fa",
+    "artifacts\\stage6_2\\predictions\\random_seed_53022_S1.csv": "bf180e9f809e0273741b3d38771fa82a3673201f9e0426ab664aa8a872982874",
+    "artifacts\\stage6_2\\predictions\\random_seed_53022_S2.csv": "b752c333271905c6fbec3d6baecf6f9054617d300edf4aa0b2a4af9c7a4b7da7",
+    "artifacts\\stage6_2\\predictions\\popularity_asof_t_seed_53021_S0.csv": "a2ac501d0a5edb294a47443ce321d7615854e63e67d745143a3a556ffd92b44b",
+    "artifacts\\stage6_2\\predictions\\popularity_asof_t_seed_53021_S1.csv": "c1acf9270d24097e6e054621f34f0cd45c409f28511374ffa677a32e53370cc9",
+    "artifacts\\stage6_2\\predictions\\popularity_asof_t_seed_53021_S2.csv": "1c420e4a7ce4ad7c8cf394a41b3dc69bf65733c471712b2e56ab742acd443200",
+    "artifacts\\stage6_2\\predictions\\popularity_asof_t_seed_53022_S0.csv": "8840d860c672fbf82839b992cb8e1398afa06be3aac146816cb471aab298bea0",
+    "artifacts\\stage6_2\\predictions\\popularity_asof_t_seed_53022_S1.csv": "290398096f76048e4e1bb972b3d5b767a6b3d855cf8a4b5ffbaebd6ed8696a5a",
+    "artifacts\\stage6_2\\predictions\\popularity_asof_t_seed_53022_S2.csv": "5f1faa6eedbdd80a5d007a26b030666b863671dd18fe00828023bdbf3bfad93e",
+    "artifacts\\stage6_2\\predictions\\cbf_seed_53021_S0.csv": "9056c6bae4459d7f27b548c157e54903da4124c1799e9b7679f8b82e00d9d923",
+    "artifacts\\stage6_2\\predictions\\cbf_seed_53021_S1.csv": "38ab57c518d33afca541237dad7e90397a889e618f57c0711bf74a817f6923f1",
+    "artifacts\\stage6_2\\predictions\\cbf_seed_53021_S2.csv": "92853fdaa6239f6c75c4fe1292ffcd7316a6cc2be805639753ff7609f123a222",
+    "artifacts\\stage6_2\\predictions\\cbf_seed_53022_S0.csv": "ff1138820465ce8a4735750659e269152f83d03bc335c764697f28b8f1fad096",
+    "artifacts\\stage6_2\\predictions\\cbf_seed_53022_S1.csv": "b456415e6489d0b8a9b02b99697ae734cb4d0625a1de4ee14985474e985847ff",
+    "artifacts\\stage6_2\\predictions\\cbf_seed_53022_S2.csv": "b7290b13d264ca601f68327208dd126b672de820feeba6d68886191ddaa68b67",
+    "artifacts\\stage6_2\\session_metrics.csv": "18872bfbc05c02ee2e9ffc798c00b5dce210cfcb887a07a65af312a2013cfca2",
+    "artifacts\\stage6_2\\metrics.csv": "d8f720837a90d6f58f30b952b762cd38318b86fc05c0f3edc7106e95fe70b488",
+    "artifacts\\stage6_2\\metrics.json": "7a9e4ae51f2d0c76afc4e664883aa80f49241eebed41236144260a3dfe7dcb0e",
+    "artifacts\\stage6_2\\cbf_tuning.csv": "7e95ff3909a772d37d3d1f426912c8aa6ecabfcb3e8f64d1b444e450c6139973",
+    "artifacts\\stage6_2\\prediction_coverage.csv": "aa24d752c5e6991c6be266e157b62b951113b2930abcd1b20b018e6f59df0ac1",
+    "artifacts\\stage6_2\\cbf_vocabulary_receipts.csv": "4b438d62bb82e59282e27935734f6985081b85258ffba0517524049246b19156",
+    "artifacts\\stage6_2\\determinism_checks.csv": "9c5db368bfcd3add1a7dc7976866d90f1dc1da477c14f58ea6add78478715e1d",
+    "artifacts\\stage6_2\\popularity_asof_t_audit.csv": "b1415f97cee9a573db4ea76f7aae64271f3c0d5082e82a4b433448b4febd405c",
+    "artifacts\\stage6_2\\config.json": "cb57763072656bb5b0c098a6cb7b180f6dd5901e436d96684a665a64435097df",
+    "artifacts\\stage6_2\\environment.json": "4eaff23f966bb3eefa996f8bd8c70d7c56d1014e9583a940ab4dd4196afebcdc",
+    "artifacts\\stage6_2\\full_test_suite.log": "bc42e36f90ad14ee03aa2e8a48d8adc41c66281d4655d34e622d98fd0d4cbc72"
+  }
+}
