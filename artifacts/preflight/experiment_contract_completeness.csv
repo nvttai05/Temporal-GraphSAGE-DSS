@@ -1,0 +1,8 @@
+model,features,loss_or_objective,tuning_budget,official_environment,status,issues
+random,"""featureless sanity baseline""",not applicable,1,google_colab,PASS,
+popularity_asof_t,"""rolling interaction counts""",not applicable,1,google_colab,PASS,
+cbf,"[""F0_content""]",similarity ranking; no fitted loss,6,google_colab,PASS,
+xgboost_static,"[""F0_content"", ""F1_static_history""]",binary_logistic,20,google_colab,PASS,
+xgboost_time,"[""F0_content"", ""F1_static_history"", ""F2_time_aware""]",binary_logistic,20,google_colab,PASS,
+static_graphsage,"[""F0_content"", ""F1_static_history""]",weighted_bce_with_logits,12,google_colab_gpu,PASS,
+GLOBAL_SEEDS,not applicable,not applicable,not applicable,not applicable,PASS,

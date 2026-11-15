@@ -1,0 +1,36 @@
+{
+  "started_at_utc": "2026-11-15T10:23:34.983757+00:00",
+  "finished_at_utc": "2026-11-15T10:23:47.398353+00:00",
+  "git_commit": "UNAVAILABLE_NOT_A_GIT_WORKTREE",
+  "config_sha256": {
+    "configs\\stage6_protocol.yaml": "298d157d13ced167cd2e85e85730149f4906776b25eb5a49d62c3bc8adddbf2a",
+    "configs\\experiments.yaml": "a5552f057267d9510041836f8cf38790c0de8e1976a86c0278aea7022b6990b2",
+    "configs\\paths.local.yaml": "21170a341273ac1e87c97f60c199805474a43b650ebb84b80cc30ea4cc3af718"
+  },
+  "code_sha256": {
+    "src\\dss_stage6\\__init__.py": "d5f70e119dcde9e3fbb8975762f167666d50c54cf504afd677824fa1f182268c",
+    "src\\dss_stage6\\data\\__init__.py": "59c4125345120223382e675c99a664516d5734913744d3125cc731da5c2ddebc",
+    "src\\dss_stage6\\data\\loader.py": "79d6ab4dff1b6dc38bebef1c143bcad6ca2bf3de06703e5c12781b4204b04543",
+    "src\\dss_stage6\\environment.py": "29088b50163736bf90bcedf4bcb46c9188d06dc5bb677aef6b4bad956efc99d1",
+    "src\\dss_stage6\\evaluation\\__init__.py": "5bbf69bccd24a5faf94e226897ecf2a8cec8d8579a1162ea31764a0d6309ea0e",
+    "src\\dss_stage6\\evaluation\\metrics.py": "bfd54c449d48fd8fc9b295ace6d30663872759c77af79eab6eb7d99db550fe12",
+    "src\\dss_stage6\\preflight.py": "4f7d86dd1d0d193b8e28e63b33f66148b59f6fc6aca165c189524ece13ddbd8b"
+  },
+  "seeds": {
+    "data": [
+      53021,
+      53022
+    ],
+    "tuning_model_seed": 42,
+    "final_model_seeds": [
+      42,
+      43,
+      44
+    ]
+  },
+  "environment": {
+    "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "executable": "D:\\HocTap\\DSS\\CK_v2.0\\Stage6\\.venv\\Scripts\\python.exe"
+  }
+}

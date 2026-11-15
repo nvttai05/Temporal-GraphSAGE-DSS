@@ -1,0 +1,59 @@
+protocol_version: stage6-v1
+
+dataset:
+  version: medajob-temporal-v0.3
+  frozen: true
+  data_seeds: [53021, 53022]
+  scenarios: [S0, S1, S2]
+  splits: [train, validation, test]
+  primary_label_window_days: 14
+  sensitivity_label_window_days: 7
+
+ranking:
+  scope: exposed_set
+  k: 10
+  primary_metric: ndcg_at_10
+  required_secondary_metrics: [recall_at_10]
+  valid_labels: [0, 1]
+  exclude_censored: true
+  exclude_unexposed: true
+  minimum_valid_candidates: 10
+  minimum_positive_labels: 1
+  sort:
+    primary: score_desc
+    tie_break: job_id_asc
+
+history:
+  mode: rolling_as_of_t_no_retrain
+  require_action_at_before_prediction: true
+  require_observed_at_before_prediction: true
+  exclude_current_session_edges: true
+  allow_prior_validation_events: true
+  allow_prior_test_events: true
+  update_model_weights_on_validation: false
+  update_model_weights_on_test: false
+  reset_between_data_cells: true
+
+aggregation:
+  session_metric: macro
+  primary_summary: macro_over_six_data_cells
+  pooled_by_session_is_secondary: true
+  report_each_data_seed: true
+  report_each_scenario: true
+
+cohorts:
+  changed_profile:
+    level: session
+    keep_full_candidate_set: true
+  low_history:
+    level: session
+    keep_full_candidate_set: true
+  new_job:
+    level: item
+    rank_on_full_candidate_set: true
+    require_at_least_one_positive_new_job: true
+
+test_policy:
+  open_test_only_after_config_lock: true
+  retune_after_test: false
+

@@ -1,0 +1,6 @@
+dataset_root: 'D:\HocTap\DSS\DSS_Stage6\data\medajob-temporal-v0.3'
+handoff_checksums: 'D:\HocTap\DSS\DSS_Stage6\data\handoff_checksums.sha256'
+data_contract: 'D:\HocTap\DSS\DSS_Stage6\data\data_contract.md'
+reports_dir: 'reports'
+artifacts_dir: 'artifacts'
+

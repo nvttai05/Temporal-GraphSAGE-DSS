@@ -1,0 +1,52 @@
+experiment_contract_version: stage6-v1
+
+environments:
+  development: windows_laptop_python_3_11
+  official_training: google_colab
+  fallback_training: kaggle
+  official_evaluation: google_colab
+  compare_runtime_across_different_environments: false
+
+seeds:
+  data: [53021, 53022]
+  tuning_model_seed: 42
+  final_model_seeds: [42, 43, 44]
+
+models:
+  random:
+    role: sanity_only
+    tuning_budget: 1
+    official_environment: google_colab
+  popularity_asof_t:
+    tuning_budget: 1
+    official_environment: google_colab
+  cbf:
+    tuning_budget: 6
+    features: [F0_content]
+    official_environment: google_colab
+  xgboost_static:
+    tuning_budget: 20
+    objective: binary_logistic
+    features: [F0_content, F1_static_history]
+    official_environment: google_colab
+  xgboost_time:
+    tuning_budget: 20
+    objective: binary_logistic
+    features: [F0_content, F1_static_history, F2_time_aware]
+    official_environment: google_colab
+  static_graphsage:
+    tuning_budget: 12
+    max_epochs: 50
+    early_stopping_patience: 7
+    loss: weighted_bce_with_logits
+    features: [F0_content, F1_static_history]
+    use_time_encoding: false
+    use_time_decay: false
+    official_environment: google_colab_gpu
+
+selection:
+  validation_objective: macro_ndcg_at_10_over_six_data_cells
+  first_tie_break: recall_at_10
+  second_tie_break: lower_complexity_and_runtime
+  one_common_config_across_scenarios: true
+

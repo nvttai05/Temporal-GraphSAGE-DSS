@@ -1,0 +1,14 @@
+seed,scenario,delta_days,valid_label_rows,benchmark_rows,valid_vs_pool_mismatches,eligible_full_set_mismatches,valid_rows_without_impression,unshown_pairs_in_pool,censored_rows_in_pool,status
+53021,S0,14,46196,36864,0,0,0,0,0,PASS
+53021,S1,14,46473,37102,0,0,0,0,0,PASS
+53021,S2,14,46583,37281,0,0,0,0,0,PASS
+53022,S0,14,46708,37390,0,0,0,0,0,PASS
+53022,S1,14,45923,36532,0,0,0,0,0,PASS
+53022,S2,14,46297,36946,0,0,0,0,0,PASS
+53021,S0,7,49406,44569,0,0,0,0,0,PASS
+53021,S1,7,50043,45200,0,0,0,0,0,PASS
+53021,S2,7,50295,45509,0,0,0,0,0,PASS
+53022,S0,7,50013,45219,0,0,0,0,0,PASS
+53022,S1,7,49849,45003,0,0,0,0,0,PASS
+53022,S2,7,50289,45466,0,0,0,0,0,PASS
+CONFIG,CONFIG,CONFIG,,,,,,,,PASS

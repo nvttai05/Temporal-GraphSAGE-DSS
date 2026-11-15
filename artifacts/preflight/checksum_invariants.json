@@ -1,0 +1,14 @@
+{
+  "supported_hash_methods": [
+    "canonical_json_sha256",
+    "raw_file_sha256",
+    "recorded_provenance_sha256"
+  ],
+  "raw_hash_requests": 141,
+  "unique_existing_raw_paths": 75,
+  "raw_hash_computations": 75,
+  "raw_sha256_computed_once_per_resolved_path": true,
+  "same_path_and_method_has_unique_actual_sha256": true,
+  "conflicts": [],
+  "status": "PASS"
+}

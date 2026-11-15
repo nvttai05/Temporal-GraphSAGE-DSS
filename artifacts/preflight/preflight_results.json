@@ -1,0 +1,85 @@
+{
+  "schema_version": "stage6-preflight-v1",
+  "run": {
+    "started_at_utc": "2026-11-15T10:23:34.983757+00:00",
+    "finished_at_utc": "2026-11-15T10:23:47.339845+00:00",
+    "dataset_version": "medajob-temporal-v0.3",
+    "dataset_root": "D:\\HocTap\\DSS\\CK_v2.0\\Stage6\\data\\medajob-temporal-v0.3",
+    "primary_label_window_days": 14,
+    "sensitivity_label_window_days": 7,
+    "data_seeds": [
+      53021,
+      53022
+    ],
+    "model_seeds": {
+      "tuning": 42,
+      "final": [
+        42,
+        43,
+        44
+      ]
+    },
+    "git_commit": "UNAVAILABLE_NOT_A_GIT_WORKTREE",
+    "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26200-SP0"
+  },
+  "checks": {
+    "check_1": {
+      "status": "PASS",
+      "summary": "143/143 checksum records matched; checksum invariants PASS",
+      "evidence": [
+        "checksum_verification.csv",
+        "checksum_invariants.json"
+      ]
+    },
+    "check_2": {
+      "status": "PASS",
+      "summary": "Loaded 36 expected seed/scenario/delta/split cells; 36 deterministic snapshots audited with 0 violations",
+      "evidence": [
+        "loader_coverage.csv",
+        "leakage_deterministic_samples.csv"
+      ]
+    },
+    "check_3": {
+      "status": "PASS",
+      "summary": "Recorded positive/negative/censored and Top-10 eligibility for 72 primary-window seed/scenario/split/cohort groups",
+      "evidence": [
+        "label_and_eligibility_statistics.csv"
+      ]
+    },
+    "check_4": {
+      "status": "PASS",
+      "summary": "Hand fixture Recall@10=0.500000000000, NDCG@10=0.386852807235; full pytest exit=0",
+      "evidence": [
+        "metric_fixture.json",
+        "full_test_suite.log"
+      ]
+    },
+    "check_5": {
+      "status": "PASS",
+      "summary": "Audited exposed-set membership, eligible full candidate sets, and rolling policy across 12 seed/scenario/window cells",
+      "evidence": [
+        "protocol_compliance.csv",
+        "leakage_deterministic_samples.csv",
+        "full_test_suite.log"
+      ]
+    },
+    "check_6": {
+      "status": "PASS",
+      "summary": "Model list, applicable feature/loss definitions, seeds, and tuning budgets are explicit",
+      "evidence": [
+        "experiment_contract_completeness.csv"
+      ]
+    }
+  },
+  "passed_checks": 6,
+  "total_checks": 6,
+  "overall_status": "PASS",
+  "eligible_for_stage_6_1": true,
+  "decision": "All six gates passed; the repository is eligible to proceed to GĐ6.1.",
+  "constraints_observed": {
+    "trained_model": false,
+    "opened_test_predictions": false,
+    "modified_frozen_dataset": false
+  }
+}

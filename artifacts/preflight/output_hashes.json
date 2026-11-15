@@ -1,0 +1,15 @@
+{
+  "artifacts\\preflight\\checksum_invariants.json": "9d222835618c9b4ef2ca6a450afaf2d80e79d7f7dd39c80826330e6a5bd7f876",
+  "artifacts\\preflight\\checksum_verification.csv": "8a6f1bd769964ec16adf5cf13341326989160385e4c495d6b4974267f9ef7daa",
+  "artifacts\\preflight\\experiment_contract_completeness.csv": "5595b5126769703ca5e8e83865d4be2001b214c2f782ed92c0c5caaf809f2c72",
+  "artifacts\\preflight\\full_test_suite.log": "25e88334eda74e1587b6d7ebe1e848f12f46c9ab86e9c2fe7e24e7353e143211",
+  "artifacts\\preflight\\label_and_eligibility_statistics.csv": "6ea37e2817ddb89ac126f34a6393524e99705f069830385e66baaaa506768193",
+  "artifacts\\preflight\\leakage_deterministic_samples.csv": "1609d79082bd7349f87ec8c80483e88b64d5fdc2fe1a34ce94b5e33d6b30bcb0",
+  "artifacts\\preflight\\loader_coverage.csv": "1d1ec3b4781cf42b89748cf765ec82b626d475e71fd29f5f0d65e3527c708dfb",
+  "artifacts\\preflight\\metric_fixture.json": "ca5d5595792bc4ea1d54a28e9b88cde8101876311a94f38cce76a536828e5926",
+  "artifacts\\preflight\\preflight_results.json": "5831470332a22aa2fd873850a13b69c8ec526dcfd31d9131cfe703aa54061919",
+  "artifacts\\preflight\\protocol_compliance.csv": "c81cabaf60fc27e61efa487a5dd814421eb7ed88a5fe6c78aeb8b83a8a54fb22",
+  "artifacts\\preflight\\README.md": "5ff86c6642badf38e37ef973cd4ef4ad7a9cca2ed1aa5ea8585b173ebad6ebeb",
+  "artifacts\\preflight\\run_metadata.json": "7e62295b06075814b5768d0c870255b5075a3d15805f25aa2ecd86c05a55fc6e",
+  "reports\\DSS_STAGE6_DATA_PREFLIGHT.md": "b1ca0852d1f587511bb3e819ab12176e753b93880fbc111ead7174f0335fb2ee"
+}
