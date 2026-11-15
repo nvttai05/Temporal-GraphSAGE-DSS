@@ -9,4 +9,9 @@ artifacts/checkpoints/
 artifacts/runs/
 artifacts/environment/*.json
 data/medajob-temporal-v0.3/
-
+data/
+artifacts/**/predictions/
+artifacts/**/checkpoints/
+artifacts/**/runs/
+*.tmp
+*.bak

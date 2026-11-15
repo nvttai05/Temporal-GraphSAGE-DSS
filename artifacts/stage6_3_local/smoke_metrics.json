@@ -1,0 +1,42 @@
+[
+  {
+    "model_kind": "static",
+    "trial_id": "trial_01",
+    "session_count": 40,
+    "candidate_rows": 943,
+    "scale_pos_weight": 24.741935483870968,
+    "ndcg_at_10": 0.20099966666949856,
+    "recall_at_10": 0.3875,
+    "informational_only": true
+  },
+  {
+    "model_kind": "static",
+    "trial_id": "trial_02",
+    "session_count": 40,
+    "candidate_rows": 943,
+    "scale_pos_weight": 24.741935483870968,
+    "ndcg_at_10": 0.15256368481637933,
+    "recall_at_10": 0.3125,
+    "informational_only": true
+  },
+  {
+    "model_kind": "time",
+    "trial_id": "trial_01",
+    "session_count": 40,
+    "candidate_rows": 943,
+    "scale_pos_weight": 24.741935483870968,
+    "ndcg_at_10": 0.24587304004919003,
+    "recall_at_10": 0.5083333333333333,
+    "informational_only": true
+  },
+  {
+    "model_kind": "time",
+    "trial_id": "trial_02",
+    "session_count": 40,
+    "candidate_rows": 943,
+    "scale_pos_weight": 24.741935483870968,
+    "ndcg_at_10": 0.2462673631253014,
+    "recall_at_10": 0.4541666666666666,
+    "informational_only": true
+  }
+]

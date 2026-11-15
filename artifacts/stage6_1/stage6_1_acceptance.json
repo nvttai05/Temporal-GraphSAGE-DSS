@@ -1,0 +1,88 @@
+{
+  "schema_version": "stage6.1-acceptance-v1",
+  "run": {
+    "run_id": "stage6_1_20261115T103511297422Z",
+    "started_at_utc": "2026-11-15T10:34:57.417374+00:00",
+    "finished_at_utc": "2026-11-15T10:35:11.377396+00:00",
+    "dataset_version": "medajob-temporal-v0.3",
+    "data_cells": 6,
+    "indexed_slices": 36,
+    "primary_delta_days": 14,
+    "smoke_split": "validation",
+    "smoke_digest": "6aac6ab88189e9f3f5e95830312051cb17de0d272b360322fae27ee1636c99fb",
+    "registry_receipt": "artifacts/stage6_1/run_registry/stage6_1_20261115T103511297422Z.json"
+  },
+  "checks": {
+    "check_1": {
+      "status": "PASS",
+      "summary": "Indexed 6 data cells and 36 seed/scenario/split/window slices",
+      "evidence": [
+        "artifacts/stage6_1/six_cell_smoke.csv"
+      ]
+    },
+    "check_2": {
+      "status": "PASS",
+      "summary": "Loaded binary labels and cohort-bearing exposed sets for one scoreable validation session in every data cell",
+      "evidence": [
+        "artifacts/stage6_1/six_cell_smoke.csv"
+      ]
+    },
+    "check_3": {
+      "status": "PASS",
+      "summary": "Rolling history used strict action_at<t and observed_at<t with zero future-edge violations",
+      "evidence": [
+        "artifacts/stage6_1/six_cell_smoke.csv",
+        "artifacts/stage6_1/full_test_suite.log"
+      ]
+    },
+    "check_4": {
+      "status": "PASS",
+      "summary": "FeatureBuilder fit on train and retained identical state across validation transforms",
+      "evidence": [
+        "artifacts/stage6_1/six_cell_smoke.csv",
+        "artifacts/stage6_1/full_test_suite.log"
+      ]
+    },
+    "check_5": {
+      "status": "PASS",
+      "summary": "Static graphs contain only observable prior actions and exclude current-session edges",
+      "evidence": [
+        "artifacts/stage6_1/six_cell_smoke.csv"
+      ]
+    },
+    "check_6": {
+      "status": "PASS",
+      "summary": "One shared exposed-set evaluator produced finite NDCG@10 and Recall@10 for all six cells with job_id ASC tie-breaking",
+      "evidence": [
+        "artifacts/stage6_1/six_cell_smoke.csv",
+        "artifacts/stage6_1/full_test_suite.log"
+      ]
+    },
+    "check_7": {
+      "status": "PASS",
+      "summary": "Run receipt stores config hash, code version, seeds, environment, runtime and artifact hashes",
+      "evidence": [
+        "artifacts/stage6_1/run_registry/stage6_1_20261115T103511297422Z.json"
+      ]
+    },
+    "check_8": {
+      "status": "PASS",
+      "summary": "Full pytest exit=0; repeated six-cell smoke digest=6aac6ab88189e9f3f5e95830312051cb17de0d272b360322fae27ee1636c99fb",
+      "evidence": [
+        "artifacts/stage6_1/full_test_suite.log",
+        "artifacts/stage6_1/six_cell_smoke.csv"
+      ]
+    }
+  },
+  "passed_checks": 8,
+  "total_checks": 8,
+  "overall_status": "PASS",
+  "eligible_for_model_implementation": true,
+  "decision": "GĐ6.1 PASS. The shared pipeline is deterministic, leakage-safe, and ready for all GĐ6 models to consume the common SessionLoader and RankingEvaluator.",
+  "constraints_observed": {
+    "trained_recommendation_model": false,
+    "opened_test_predictions": false,
+    "modified_frozen_dataset": false,
+    "modified_locked_protocol": false
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "fit_split": "train",
+  "train_sessions": 160,
+  "train_rows": 3990,
+  "validation_sessions": 40,
+  "validation_rows": 943,
+  "static_state_before_validation": "57cddb7c90911ef28ae67506de9a58aaa51a9a284176760152d69a1cd48e4b59",
+  "time_state_before_validation": "204a70ad5a06521bda342338a8c8bd1e7c8d0cf8bf84a1571d9af10893a46861",
+  "config_sha256": "cda958358741e8b9f2d53b14dc36ee7837c88393f0f915f970b10e8cce1595e1",
+  "static_state_after_validation": "57cddb7c90911ef28ae67506de9a58aaa51a9a284176760152d69a1cd48e4b59",
+  "time_state_after_validation": "204a70ad5a06521bda342338a8c8bd1e7c8d0cf8bf84a1571d9af10893a46861",
+  "states_unchanged": true
+}

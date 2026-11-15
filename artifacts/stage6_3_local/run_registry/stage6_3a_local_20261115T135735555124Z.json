@@ -1,0 +1,400 @@
+{
+  "run_id": "stage6_3a_local_20261115T135735555124Z",
+  "status": "READY_FOR_COLAB",
+  "config": {
+    "contract_version": "stage6.3a-v1",
+    "status": "locked_before_local_smoke",
+    "created_with_seed": 42,
+    "scope": {
+      "models": [
+        "xgboost_static",
+        "xgboost_time"
+      ],
+      "objective": "binary:logistic",
+      "tree_method": "hist",
+      "eval_metric": "logloss",
+      "tuning_model_seed": 42,
+      "validation_split": "validation",
+      "primary_delta_days": 14,
+      "local_smoke_cell": {
+        "seed": 53021,
+        "scenario": "S0"
+      },
+      "local_smoke_max_trials_per_model": 2,
+      "full_trials_per_model": 20,
+      "common_config_across_data_cells": true,
+      "train_each_data_cell_separately": true
+    },
+    "search_space": {
+      "n_estimators": {
+        "min": 200,
+        "max": 800,
+        "type": "integer"
+      },
+      "learning_rate": [
+        0.03,
+        0.05,
+        0.1
+      ],
+      "max_depth": [
+        3,
+        5,
+        7
+      ],
+      "min_child_weight": [
+        1,
+        5,
+        10
+      ],
+      "subsample": [
+        0.8,
+        1.0
+      ],
+      "colsample_bytree": [
+        0.8,
+        1.0
+      ],
+      "reg_alpha": [
+        0,
+        0.1,
+        1.0
+      ],
+      "reg_lambda": [
+        1,
+        5,
+        10
+      ],
+      "gamma": [
+        0,
+        0.1
+      ]
+    },
+    "trials": [
+      {
+        "trial_id": "trial_01",
+        "n_estimators": 314,
+        "learning_rate": 0.03,
+        "max_depth": 7,
+        "min_child_weight": 5,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_alpha": 0,
+        "reg_lambda": 10,
+        "gamma": 0
+      },
+      {
+        "trial_id": "trial_02",
+        "n_estimators": 758,
+        "learning_rate": 0.03,
+        "max_depth": 7,
+        "min_child_weight": 5,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_alpha": 0,
+        "reg_lambda": 1,
+        "gamma": 0
+      },
+      {
+        "trial_id": "trial_03",
+        "n_estimators": 717,
+        "learning_rate": 0.1,
+        "max_depth": 3,
+        "min_child_weight": 10,
+        "subsample": 0.8,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0,
+        "reg_lambda": 5,
+        "gamma": 0.1
+      },
+      {
+        "trial_id": "trial_04",
+        "n_estimators": 206,
+        "learning_rate": 0.03,
+        "max_depth": 7,
+        "min_child_weight": 5,
+        "subsample": 1.0,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0,
+        "reg_lambda": 1,
+        "gamma": 0.1
+      },
+      {
+        "trial_id": "trial_05",
+        "n_estimators": 304,
+        "learning_rate": 0.03,
+        "max_depth": 5,
+        "min_child_weight": 1,
+        "subsample": 1.0,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 1.0,
+        "reg_lambda": 5,
+        "gamma": 0
+      },
+      {
+        "trial_id": "trial_06",
+        "n_estimators": 670,
+        "learning_rate": 0.1,
+        "max_depth": 3,
+        "min_child_weight": 5,
+        "subsample": 0.8,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 1.0,
+        "reg_lambda": 10,
+        "gamma": 0.1
+      },
+      {
+        "trial_id": "trial_07",
+        "n_estimators": 791,
+        "learning_rate": 0.03,
+        "max_depth": 7,
+        "min_child_weight": 1,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_alpha": 0.1,
+        "reg_lambda": 1,
+        "gamma": 0
+      },
+      {
+        "trial_id": "trial_08",
+        "n_estimators": 303,
+        "learning_rate": 0.05,
+        "max_depth": 5,
+        "min_child_weight": 5,
+        "subsample": 1.0,
+        "colsample_bytree": 0.8,
+        "reg_alpha": 0.1,
+        "reg_lambda": 5,
+        "gamma": 0
+      },
+      {
+        "trial_id": "trial_09",
+        "n_estimators": 473,
+        "learning_rate": 0.1,
+        "max_depth": 7,
+        "min_child_weight": 10,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_alpha": 1.0,
+        "reg_lambda": 10,
+        "gamma": 0
+      },
+      {
+        "trial_id": "trial_10",
+        "n_estimators": 367,
+        "learning_rate": 0.05,
+        "max_depth": 5,
+        "min_child_weight": 5,
+        "subsample": 0.8,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0,
+        "reg_lambda": 1,
+        "gamma": 0
+      },
+      {
+        "trial_id": "trial_11",
+        "n_estimators": 523,
+        "learning_rate": 0.05,
+        "max_depth": 5,
+        "min_child_weight": 1,
+        "subsample": 0.8,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0,
+        "reg_lambda": 10,
+        "gamma": 0.1
+      },
+      {
+        "trial_id": "trial_12",
+        "n_estimators": 605,
+        "learning_rate": 0.1,
+        "max_depth": 5,
+        "min_child_weight": 1,
+        "subsample": 1.0,
+        "colsample_bytree": 0.8,
+        "reg_alpha": 0,
+        "reg_lambda": 10,
+        "gamma": 0.1
+      },
+      {
+        "trial_id": "trial_13",
+        "n_estimators": 798,
+        "learning_rate": 0.05,
+        "max_depth": 7,
+        "min_child_weight": 5,
+        "subsample": 1.0,
+        "colsample_bytree": 0.8,
+        "reg_alpha": 0,
+        "reg_lambda": 10,
+        "gamma": 0.1
+      },
+      {
+        "trial_id": "trial_14",
+        "n_estimators": 293,
+        "learning_rate": 0.03,
+        "max_depth": 3,
+        "min_child_weight": 1,
+        "subsample": 0.8,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 1.0,
+        "reg_lambda": 1,
+        "gamma": 0.1
+      },
+      {
+        "trial_id": "trial_15",
+        "n_estimators": 590,
+        "learning_rate": 0.1,
+        "max_depth": 5,
+        "min_child_weight": 10,
+        "subsample": 1.0,
+        "colsample_bytree": 0.8,
+        "reg_alpha": 1.0,
+        "reg_lambda": 10,
+        "gamma": 0
+      },
+      {
+        "trial_id": "trial_16",
+        "n_estimators": 749,
+        "learning_rate": 0.05,
+        "max_depth": 7,
+        "min_child_weight": 5,
+        "subsample": 0.8,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0.1,
+        "reg_lambda": 1,
+        "gamma": 0.1
+      },
+      {
+        "trial_id": "trial_17",
+        "n_estimators": 203,
+        "learning_rate": 0.1,
+        "max_depth": 7,
+        "min_child_weight": 5,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_alpha": 1.0,
+        "reg_lambda": 5,
+        "gamma": 0
+      },
+      {
+        "trial_id": "trial_18",
+        "n_estimators": 356,
+        "learning_rate": 0.05,
+        "max_depth": 3,
+        "min_child_weight": 10,
+        "subsample": 0.8,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0.1,
+        "reg_lambda": 1,
+        "gamma": 0
+      },
+      {
+        "trial_id": "trial_19",
+        "n_estimators": 571,
+        "learning_rate": 0.05,
+        "max_depth": 3,
+        "min_child_weight": 1,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_alpha": 0,
+        "reg_lambda": 10,
+        "gamma": 0.1
+      },
+      {
+        "trial_id": "trial_20",
+        "n_estimators": 270,
+        "learning_rate": 0.1,
+        "max_depth": 3,
+        "min_child_weight": 1,
+        "subsample": 1.0,
+        "colsample_bytree": 0.8,
+        "reg_alpha": 0.1,
+        "reg_lambda": 10,
+        "gamma": 0.1
+      }
+    ],
+    "feature_contract": {
+      "f0": [
+        "cbf_score_locked_cbf_05_skills3_occupation2",
+        "skill_overlap_count",
+        "skill_jaccard",
+        "skill_binary_cosine",
+        "occupation_match",
+        "location_match",
+        "experience_match",
+        "experience_distance"
+      ],
+      "f1": [
+        "candidate_cumulative_impression_count",
+        "candidate_cumulative_view_count",
+        "candidate_cumulative_save_count",
+        "candidate_cumulative_apply_count",
+        "job_cumulative_impression_count",
+        "job_cumulative_view_count",
+        "job_cumulative_save_count",
+        "job_cumulative_apply_count",
+        "candidate_job_prior_interaction_count",
+        "candidate_job_prior_view_count",
+        "candidate_job_prior_save_count",
+        "candidate_job_prior_apply_count",
+        "candidate_job_prior_interaction_flag",
+        "candidate_degree",
+        "job_degree"
+      ],
+      "f2": {
+        "recency_missing_sentinel_days": 100000.0,
+        "exponential_decay_half_life_days": 14.0,
+        "windows_days": [
+          7,
+          14,
+          30
+        ]
+      }
+    },
+    "local_smoke": {
+      "max_train_sessions": 160,
+      "max_validation_sessions": 40,
+      "trials_to_run": [
+        "trial_01",
+        "trial_02"
+      ]
+    },
+    "colab": {
+      "resume": true,
+      "checkpoint_every_trial": true,
+      "output_subdir": "stage6_3_colab"
+    }
+  },
+  "config_sha256": "0f2022dd7c818bdc39dd2d6b753544a9bbca6215683417bcb971c8c2a63f57b3",
+  "code_version": {
+    "git_commit": "a8a90fd4f0bfd63c2c22b288d153f6d8d95a2f1c",
+    "source_tree_sha256": "3bc1f6d841d964844dcbf605cc3026c13804eb1b92b63e33cf5091b5bed352ff"
+  },
+  "seeds": {
+    "tuning_model_seed": 42,
+    "data_seed": 53021
+  },
+  "environment": {
+    "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+    "executable": "D:\\HocTap\\DSS\\CK_v2.0\\Stage6\\.venv\\Scripts\\python.exe",
+    "platform": "Windows-10-10.0.26200-SP0"
+  },
+  "runtime_seconds": 72.68799999996554,
+  "artifact_sha256": {
+    "artifacts\\stage6_3_local\\feature_schema.json": "2e926602cb4930e61955458377b68ff292e43de8b05b21106b8f4ba887e5711c",
+    "artifacts\\stage6_3_local\\feature_leakage_audit.csv": "78b8658a9ed9135f59d9d381ab54f6361ce517db39516a05c4585da9120762f6",
+    "artifacts\\stage6_3_local\\checkpoints\\xgboost_static_trial_01.json": "b0061f71fd8d19744c2a2ee7ae3314898a4841fa80ea318afc8177884e7a554a",
+    "artifacts\\stage6_3_local\\predictions\\xgboost_static_trial_01_53021_S0.csv": "e5891045f577ff04e3cba9757c85b2faf079ef396d12905e200f62689bad7b53",
+    "artifacts\\stage6_3_local\\checkpoints\\xgboost_static_trial_02.json": "37f0bf5598d22efe17e8d9622356bb13e87f143564435f8114873c44c47c7fbf",
+    "artifacts\\stage6_3_local\\predictions\\xgboost_static_trial_02_53021_S0.csv": "92b629b0a4e86f138a614a709a9038f33c87a12b0fc037cc3e92fd7e3d2f0677",
+    "artifacts\\stage6_3_local\\checkpoints\\xgboost_time_trial_01.json": "bf9272baff6e7aac68d15b5aebaf2e59b8e00b6c75d8743664f2f85e176ec365",
+    "artifacts\\stage6_3_local\\predictions\\xgboost_time_trial_01_53021_S0.csv": "d4edc5ea4669c60cffe10a5af715e68d93136ad279a4657f27fd5e09d7aa7458",
+    "artifacts\\stage6_3_local\\checkpoints\\xgboost_time_trial_02.json": "6c19680b685920845255c8a19a01f717a289eb4e33d50ebe87b0e833625abd76",
+    "artifacts\\stage6_3_local\\predictions\\xgboost_time_trial_02_53021_S0.csv": "09918d6c4e67ebc9e01eba02b51f5db2c718753921dce038fd8e60769bdbd429",
+    "artifacts\\stage6_3_local\\train_only_fit_receipts.json": "334e0f2c1fe0ab0941670ff97950ff24da192517aa8e211c5d5d165f89487adc",
+    "artifacts\\stage6_3_local\\smoke_metrics.csv": "2208e54d2df61bdfe180df81a9a5f6dee2461e0a6eb9da3eceffec1adddaf702",
+    "artifacts\\stage6_3_local\\smoke_metrics.json": "2027c18984c459e34fbb965f6b3396e12564776369ba94b00b040b3f76e55ab6",
+    "artifacts\\stage6_3_local\\prediction_coverage.csv": "0b6489bff4149e4930d5a7d15e713e303b1fd5d3661265cc86bbdb700b7cc9f9",
+    "artifacts\\stage6_3_local\\checkpoint_roundtrip.csv": "ac7d95a75928a466b79f91319215e304369721dd57f4d06de26e5958db71ecc8",
+    "artifacts\\stage6_3_local\\determinism.csv": "63b8b7df392bf7c99ca9e9b62e50a4bb9ad5f2dd0a4f292f866c5f3f5a7a5c7b",
+    "artifacts\\stage6_3_local\\full_test_suite.log": "e20a7e7a0461c75357d746091b96b1e826bdef74723b79e6fa435cb7ec5375ee"
+  }
+}

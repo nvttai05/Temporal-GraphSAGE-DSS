@@ -1,0 +1,7 @@
+seed,scenario,split,delta_days,session_id,candidate_count,history_edges,graph_nodes,graph_edges,feature_columns,feature_state_unchanged,ndcg_at_10,recall_at_10,future_edge_violations
+53021,S0,validation,14,S0_candidate_0b918943df0962bc7a18_098_v03,25,18946,345,18946,7,True,0,0,0
+53021,S1,validation,14,S1_candidate_19581e27de7ced00ff1c_098_v03,24,18741,347,18741,8,True,0.3010299956639812,1,0
+53021,S2,validation,14,S2_candidate_0b918943df0962bc7a18_098_v03,23,18131,346,18131,6,True,0.63092975357145753,1,0
+53022,S0,validation,14,S0_candidate_0b918943df0962bc7a18_098_v03,23,19089,344,19089,7,True,0.56422211103166353,1,0
+53022,S1,validation,14,S1_candidate_0b918943df0962bc7a18_098_v03,23,19010,348,19010,7,True,0,0,0
+53022,S2,validation,14,S2_candidate_0b918943df0962bc7a18_098_v03,20,18230,348,18230,6,True,0,0,0

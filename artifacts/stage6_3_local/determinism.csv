@@ -1,0 +1,5 @@
+model_kind,trial_id,seed,score_exact_match,status
+static,trial_01,42,True,PASS
+static,trial_02,42,True,PASS
+time,trial_01,42,True,PASS
+time,trial_02,42,True,PASS

@@ -1,0 +1,5 @@
+model_kind,trial_id,checkpoint,score_exact_match,status
+static,trial_01,artifacts/stage6_3_local/checkpoints/xgboost_static_trial_01.json,True,PASS
+static,trial_02,artifacts/stage6_3_local/checkpoints/xgboost_static_trial_02.json,True,PASS
+time,trial_01,artifacts/stage6_3_local/checkpoints/xgboost_time_trial_01.json,True,PASS
+time,trial_02,artifacts/stage6_3_local/checkpoints/xgboost_time_trial_02.json,True,PASS

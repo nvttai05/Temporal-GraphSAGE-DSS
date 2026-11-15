@@ -1,0 +1,97 @@
+{
+  "schema_version": "stage6.3a-local-smoke-v1",
+  "run": {
+    "run_id": "stage6_3a_local_20261115T135735555124Z",
+    "started_at_utc": "2026-11-15T13:56:22.986798+00:00",
+    "finished_at_utc": "2026-11-15T13:57:35.664273+00:00",
+    "runtime_seconds": 72.68799999996554,
+    "git_commit_before_work": "a8a90fd4f0bfd63c2c22b288d153f6d8d95a2f1c",
+    "git_state_at_receipt": {
+      "commit": "a8a90fd4f0bfd63c2c22b288d153f6d8d95a2f1c",
+      "status_lines": [
+        " M src/dss_stage6/models/__init__.py",
+        "?? .gitignore",
+        "?? README_SETUP_WINDOWS.md",
+        "?? artifacts/stage6_1/",
+        "?? artifacts/stage6_3_local/",
+        "?? configs/stage6_3_xgboost.yaml",
+        "?? data/",
+        "?? docs/STAGE6_3_COLAB_GUIDE.md",
+        "?? notebooks/",
+        "?? reports/DSS_STAGE6_3A_LOCAL_SMOKE.md",
+        "?? requirements-colab.txt",
+        "?? scripts/run_stage6_3.py",
+        "?? src/dss_stage6/models/xgboost_models.py",
+        "?? src/dss_stage6/stage6_3.py",
+        "?? src/dss_stage6/xgboost_features.py",
+        "?? tests/test_stage6_3_xgboost.py"
+      ]
+    },
+    "cell": {
+      "seed": 53021,
+      "scenario": "S0"
+    },
+    "trials_per_model": 2,
+    "test_predictions_opened": false,
+    "registry_receipt": "artifacts/stage6_3_local/run_registry/stage6_3a_local_20261115T135735555124Z.json"
+  },
+  "checks": {
+    "prerequisites": {
+      "status": "PASS",
+      "summary": "GĐ6.0/GĐ6.1/GĐ6.2 PASS and CBF config locked"
+    },
+    "locked_trials": {
+      "status": "PASS",
+      "summary": "20 deterministic trials were persisted before training and locked hashes stayed unchanged"
+    },
+    "feature_schema": {
+      "status": "PASS",
+      "summary": "Static contains F0+F1 only; time contains F0+F1+F2"
+    },
+    "leakage": {
+      "status": "PASS",
+      "summary": "Feature future/current-session violations=0"
+    },
+    "train_only_fit": {
+      "status": "PASS",
+      "summary": "Encoder/scaler/CBF vocabulary fit on train and unchanged by validation"
+    },
+    "coverage": {
+      "status": "PASS",
+      "summary": "Every smoke prediction covers exactly the exposed validation pairs"
+    },
+    "shared_evaluator": {
+      "status": "PASS",
+      "summary": "NDCG@10 and Recall@10 produced by shared RankingEvaluator"
+    },
+    "determinism": {
+      "status": "PASS",
+      "summary": "Repeated seed-42 training produced byte-identical score arrays"
+    },
+    "checkpoint_roundtrip": {
+      "status": "PASS",
+      "summary": "Every smoke checkpoint reload produced identical scores"
+    },
+    "tests": {
+      "status": "PASS",
+      "summary": "Full pytest exit=0"
+    },
+    "colab_package": {
+      "status": "PASS",
+      "summary": "Colab runner, pinned requirements and guide are present"
+    }
+  },
+  "passed_checks": 11,
+  "total_checks": 11,
+  "overall_status": "READY_FOR_COLAB",
+  "full_stage6_3_complete": false,
+  "configuration_selected_from_smoke": false,
+  "decision": "GĐ6.3A local implementation READY_FOR_COLAB. Full GĐ6.3 remains incomplete until 20-trial tuning for both models across all six validation cells finishes on Colab.",
+  "constraints_observed": {
+    "dataset_modified": false,
+    "protocol_modified": false,
+    "stage6_2_modified": false,
+    "test_predictions_opened": false,
+    "final_config_selected": false
+  }
+}

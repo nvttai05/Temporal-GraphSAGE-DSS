@@ -1,0 +1,5 @@
+model_kind,trial_id,expected_pairs,prediction_pairs,duplicates,status
+static,trial_01,943,943,0,PASS
+static,trial_02,943,943,0,PASS
+time,trial_01,943,943,0,PASS
+time,trial_02,943,943,0,PASS

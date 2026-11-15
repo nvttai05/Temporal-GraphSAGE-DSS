@@ -1,0 +1,41 @@
+{
+  "run_id": "stage6_1_20261115T103511297422Z",
+  "status": "PASS",
+  "config": {
+    "stage": "6.1",
+    "protocol_sha256": "298d157d13ced167cd2e85e85730149f4906776b25eb5a49d62c3bc8adddbf2a",
+    "experiments_sha256": "a5552f057267d9510041836f8cf38790c0de8e1976a86c0278aea7022b6990b2",
+    "paths_sha256": "21170a341273ac1e87c97f60c199805474a43b650ebb84b80cc30ea4cc3af718",
+    "smoke_split": "validation",
+    "smoke_delta_days": 14,
+    "ranking_scope": "exposed_set",
+    "k": 10
+  },
+  "config_sha256": "5cd20034e826fe7e82940dcd532c567e3b071025856590ce01032f72995f59bc",
+  "code_version": {
+    "git_commit": "1a11f1cf35d7f74cfe2c318e65f1f250cc8f185c",
+    "source_tree_sha256": "6f0ed508b4a5d46dbc638bfc0f6abd436a1f852ddbc18f9587ee3467f8be0919"
+  },
+  "seeds": {
+    "data": [
+      53021,
+      53022
+    ],
+    "tuning_model_seed": 42,
+    "final_model_seeds": [
+      42,
+      43,
+      44
+    ]
+  },
+  "environment": {
+    "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+    "executable": "D:\\HocTap\\DSS\\CK_v2.0\\Stage6\\.venv\\Scripts\\python.exe",
+    "platform": "Windows-10-10.0.26200-SP0"
+  },
+  "runtime_seconds": 13.952999999979511,
+  "artifact_sha256": {
+    "artifacts\\stage6_1\\six_cell_smoke.csv": "6aac6ab88189e9f3f5e95830312051cb17de0d272b360322fae27ee1636c99fb",
+    "artifacts\\stage6_1\\full_test_suite.log": "98be601e491a3b3e60a54635879bdba2bf54a9627e5b8a83432bef4ded8c1b45"
+  }
+}

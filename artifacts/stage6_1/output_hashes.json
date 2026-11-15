@@ -1,0 +1,7 @@
+{
+  "artifacts/stage6_1/six_cell_smoke.csv": "6aac6ab88189e9f3f5e95830312051cb17de0d272b360322fae27ee1636c99fb",
+  "artifacts/stage6_1/full_test_suite.log": "98be601e491a3b3e60a54635879bdba2bf54a9627e5b8a83432bef4ded8c1b45",
+  "artifacts/stage6_1/run_registry/stage6_1_20261115T103511297422Z.json": "e96d1ff66f0af31bd2791dfd37cec4612517a56d94664622278cff1c4c8a0d06",
+  "artifacts/stage6_1/stage6_1_acceptance.json": "4e39e667bd2e6b7a6c539498bce9b7f2066aa0876662ad3444b26fe92b9c5712",
+  "reports/DSS_STAGE6_1_PIPELINE_EVALUATION_ENGINE.md": "7f70b214ba9dd3692ed9d89793739c6621e2a98fcda313b44c337f7a8acd3d73"
+}
